@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en-US" data-ng-app="demoApp">
+    <head>
+        <meta charset="UTF-8">
+        <title>Single Page Application</title>
+
+    </head>
+    <body>
+        <div data-ng-controller="SimpleController">
+            <h1 data-ng-bind="message"></h1>
+            <ul>
+                <li data-ng-repeat="customer in customers">
+                    <span data-ng-bind-template="Customer: {{customer.name}}  City: {{customer.city}}"></span>
+                </li>
+            </ul>
+        </div>
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.5/angular.min.js"></script>
+        <script src="application/app.js"></script>     
+        <script src="application/simpleControler.js"></script>
+        <script src="application/filters.js"></script>
+    </body>
+</html>
